@@ -1,0 +1,25 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="55%" stop-color="#93c5fd" />
+      <stop offset="100%" stop-color="#e5e7eb" />
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="txt" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="40" fill="#05050a" />
+  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#ring)" stroke-width="7" stroke-linecap="round"
+    stroke-dasharray="215 20 15 12" transform="rotate(120 100 100)" />
+  <path d="M100 34 L124 44 L124 68 C124 88 113 101 100 107 C87 101 76 88 76 68 L76 44 Z"
+    fill="none" stroke="url(#shield)" stroke-width="7" stroke-linejoin="round" />
+  <text x="100" y="158" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800"
+    font-size="52" letter-spacing="-1" fill="url(#txt)">FGA</text>
+</svg>

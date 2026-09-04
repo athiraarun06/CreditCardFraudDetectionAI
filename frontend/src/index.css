@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: radial-gradient(circle at 20% 0%, rgba(124, 58, 237, 0.15), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.15), transparent 40%), #05050a;
+  min-height: 100vh;
+  color: #fff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.5);
+  border-radius: 8px;
+}
+
+/* ---- Light theme overrides ---- */
+html.light body {
+  background: radial-gradient(circle at 20% 0%, rgba(124, 58, 237, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.08), transparent 40%), #f4f4f8;
+  color: #14141f;
+}
+
+html.light .glass {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(20, 20, 31, 0.08);
+  box-shadow: 0 4px 24px rgba(20, 20, 31, 0.06);
+}
+
+html.light .text-white { color: #14141f !important; }
+html.light .text-white\/70 { color: rgba(20, 20, 31, 0.75) !important; }
+html.light .text-white\/60 { color: rgba(20, 20, 31, 0.65) !important; }
+html.light .text-white\/50 { color: rgba(20, 20, 31, 0.55) !important; }
+html.light .text-white\/40 { color: rgba(20, 20, 31, 0.45) !important; }
+html.light .bg-white\/5 { background-color: rgba(20, 20, 31, 0.04) !important; }
+html.light .bg-white\/10 { background-color: rgba(20, 20, 31, 0.07) !important; }
+html.light .border-white\/5 { border-color: rgba(20, 20, 31, 0.08) !important; }
+html.light .border-white\/10 { border-color: rgba(20, 20, 31, 0.12) !important; }
+html.light select option { background: #fff; color: #14141f; }
+
+/* ---- Loading skeleton ---- */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.12) 37%, rgba(255,255,255,0.06) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+  border-radius: 0.75rem;
+}
+html.light .skeleton {
+  background: linear-gradient(90deg, rgba(20,20,31,0.06) 25%, rgba(20,20,31,0.12) 37%, rgba(20,20,31,0.06) 63%);
+  background-size: 400% 100%;
+}
+@keyframes skeleton-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}

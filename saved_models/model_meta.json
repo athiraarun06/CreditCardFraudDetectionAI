@@ -1,0 +1,42 @@
+{
+  "model_name": "random_forest",
+  "categorical_cols": [
+    "merchant_category",
+    "location",
+    "payment_method",
+    "card_type",
+    "device_type",
+    "currency"
+  ],
+  "numeric_cols": [
+    "amount",
+    "customer_age",
+    "previous_transactions",
+    "avg_transaction_amount",
+    "transaction_hour",
+    "weekday",
+    "weekend_transaction",
+    "is_night_transaction",
+    "amount_difference",
+    "amount_ratio",
+    "high_amount_flag",
+    "location_changed",
+    "transaction_frequency",
+    "international_transaction",
+    "device_change",
+    "merchant_frequency",
+    "customer_velocity_score",
+    "geo_distance",
+    "transaction_velocity",
+    "historical_success_rate",
+    "merchant_risk_score",
+    "vpn_flag",
+    "device_trust_flag",
+    "txns_last_hour",
+    "txns_last_day",
+    "time_since_last_txn_minutes",
+    "failed_login_attempts",
+    "otp_flag"
+  ],
+  "cost_optimal_threshold": 0.15593494884348638
+}

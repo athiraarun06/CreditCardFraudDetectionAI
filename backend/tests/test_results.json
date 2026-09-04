@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Normal grocery purchase",
+    "expected": "low",
+    "probability": 8.7,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Petrol payment",
+    "expected": "low",
+    "probability": 7.2,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Netflix subscription",
+    "expected": "low",
+    "probability": 11.6,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "International online purchase (known merchant)",
+    "expected": "medium",
+    "probability": 17.4,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Airport travel booking",
+    "expected": "medium",
+    "probability": 30.0,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "ATM-style high withdrawal",
+    "expected": "medium",
+    "probability": 25.5,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "Luxury shopping spree",
+    "expected": "high",
+    "probability": 31.2,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "Multiple rapid UPI payments",
+    "expected": "high",
+    "probability": 49.8,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "New device login + purchase",
+    "expected": "medium",
+    "probability": 25.0,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "VPN transaction",
+    "expected": "medium",
+    "probability": 32.9,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "Midnight foreign transaction",
+    "expected": "high",
+    "probability": 43.1,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "Routine dining out",
+    "expected": "low",
+    "probability": 8.2,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Coffee shop tap-to-pay",
+    "expected": "low",
+    "probability": 9.0,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Monthly electricity bill",
+    "expected": "low",
+    "probability": 19.8,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Mobile recharge",
+    "expected": "low",
+    "probability": 11.6,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "New merchant electronics purchase, high value",
+    "expected": "high",
+    "probability": 96.2,
+    "risk_level": "Critical",
+    "recommended_action": "Freeze Account (Critical)"
+  },
+  {
+    "name": "Failed OTP + high amount",
+    "expected": "critical",
+    "probability": 100.0,
+    "risk_level": "Critical",
+    "recommended_action": "Freeze Account (Critical)"
+  },
+  {
+    "name": "Impossible travel (2 cities in minutes)",
+    "expected": "high",
+    "probability": 48.6,
+    "risk_level": "Medium",
+    "recommended_action": "Freeze Account (Critical)"
+  },
+  {
+    "name": "Regular UPI transfer to known merchant",
+    "expected": "low",
+    "probability": 8.7,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Weekend entertainment outing",
+    "expected": "low",
+    "probability": 10.5,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "High-risk merchant, average amount",
+    "expected": "medium",
+    "probability": 37.1,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "Senior citizen normal purchase",
+    "expected": "low",
+    "probability": 7.4,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Young adult first credit card use",
+    "expected": "medium",
+    "probability": 26.4,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "Wallet top-up",
+    "expected": "low",
+    "probability": 11.2,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Fuel purchase abroad while traveling",
+    "expected": "medium",
+    "probability": 11.1,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Large but explainable purchase (matches avg)",
+    "expected": "low",
+    "probability": 11.8,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Suspicious velocity burst on new device",
+    "expected": "critical",
+    "probability": 81.1,
+    "risk_level": "Critical",
+    "recommended_action": "Decline Transaction"
+  },
+  {
+    "name": "Standard hotel booking",
+    "expected": "low",
+    "probability": 23.1,
+    "risk_level": "Medium",
+    "recommended_action": "Send OTP Verification"
+  },
+  {
+    "name": "Subscription renewal",
+    "expected": "low",
+    "probability": 12.9,
+    "risk_level": "Low",
+    "recommended_action": "Approve Automatically"
+  },
+  {
+    "name": "Cross-border wire-style large transfer",
+    "expected": "critical",
+    "probability": 100.0,
+    "risk_level": "Critical",
+    "recommended_action": "Freeze Account (Critical)"
+  }
+]
