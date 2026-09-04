@@ -5,9 +5,7 @@ from fastapi import APIRouter
 
 router = APIRouter(tags=["meta"])
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-PROJECT_ROOT = os.path.dirname(BASE_DIR)
-SAVED_MODELS_DIR = os.path.join(PROJECT_ROOT, "saved_models")
+from app.core.paths import SAVED_MODELS_DIR
 META_PATH = os.path.join(SAVED_MODELS_DIR, "model_meta.json")
 METRICS_PATH = os.path.join(SAVED_MODELS_DIR, "metrics.json")
 

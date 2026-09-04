@@ -1,0 +1,100 @@
+{
+  "best_model": "random_forest",
+  "results": {
+    "logistic_regression": {
+      "accuracy": 0.726,
+      "precision": 0.04316546762589928,
+      "recall": 0.6,
+      "f1": 0.08053691275167785,
+      "roc_auc": 0.6562755102040817,
+      "pr_auc": 0.03814669494602248,
+      "mcc": 0.10267550201389122,
+      "confusion_matrix": [
+        [
+          714,
+          266
+        ],
+        [
+          8,
+          12
+        ]
+      ]
+    },
+    "decision_tree": {
+      "accuracy": 0.874,
+      "precision": 0.058333333333333334,
+      "recall": 0.35,
+      "f1": 0.1,
+      "roc_auc": 0.575,
+      "pr_auc": 0.040317581791989854,
+      "mcc": 0.10111086759016617,
+      "confusion_matrix": [
+        [
+          867,
+          113
+        ],
+        [
+          13,
+          7
+        ]
+      ]
+    },
+    "random_forest": {
+      "accuracy": 0.978,
+      "precision": 0.25,
+      "recall": 0.05,
+      "f1": 0.08333333333333333,
+      "roc_auc": 0.6947959183673469,
+      "pr_auc": 0.07655924686493891,
+      "mcc": 0.1041118411575928,
+      "confusion_matrix": [
+        [
+          977,
+          3
+        ],
+        [
+          19,
+          1
+        ]
+      ]
+    },
+    "gradient_boosting": {
+      "accuracy": 0.979,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.6615816326530611,
+      "pr_auc": 0.04955798190328937,
+      "mcc": -0.004519799979773804,
+      "confusion_matrix": [
+        [
+          979,
+          1
+        ],
+        [
+          20,
+          0
+        ]
+      ]
+    },
+    "xgboost": {
+      "accuracy": 0.98,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.6817857142857142,
+      "pr_auc": 0.059137074861791025,
+      "mcc": 0.0,
+      "confusion_matrix": [
+        [
+          980,
+          0
+        ],
+        [
+          20,
+          0
+        ]
+      ]
+    }
+  }
+}

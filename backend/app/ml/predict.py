@@ -10,9 +10,7 @@ from app.ml.decision_engine import (
     recommended_action, build_explanation,
 )
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-PROJECT_ROOT = os.path.dirname(BASE_DIR)
-SAVED_MODELS_DIR = os.path.join(PROJECT_ROOT, "saved_models")
+from app.core.paths import SAVED_MODELS_DIR
 
 _model = None
 _preprocessor = None

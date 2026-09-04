@@ -90,9 +90,7 @@ def on_startup():
                       f"Endpoints requiring DB will fail until it's reachable.")
 
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.dirname(BASE_DIR)
-SAVED_MODELS_DIR = os.path.join(PROJECT_ROOT, "saved_models")
+from app.core.paths import SAVED_MODELS_DIR
 if os.path.isdir(SAVED_MODELS_DIR):
     app.mount("/static/models", StaticFiles(directory=SAVED_MODELS_DIR), name="model_artifacts")
 

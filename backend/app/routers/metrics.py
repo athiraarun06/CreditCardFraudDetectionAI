@@ -7,9 +7,8 @@ from app.schemas.schemas import ModelMetricsResponse
 
 router = APIRouter(tags=["metrics"])
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-PROJECT_ROOT = os.path.dirname(BASE_DIR)
-METRICS_PATH = os.path.join(PROJECT_ROOT, "saved_models", "metrics.json")
+from app.core.paths import SAVED_MODELS_DIR
+METRICS_PATH = os.path.join(SAVED_MODELS_DIR, "metrics.json")
 
 
 @router.get("/metrics", response_model=ModelMetricsResponse)

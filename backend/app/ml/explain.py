@@ -6,11 +6,9 @@ import pandas as pd
 
 from app.ml.features import engineer_features, CATEGORICAL_COLS, NUMERIC_COLS
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-PROJECT_ROOT = os.path.dirname(BASE_DIR)
-SAVED_MODELS_DIR = os.path.join(PROJECT_ROOT, "saved_models")
+from app.core.paths import SAVED_MODELS_DIR, DATA_DIR
 SHAP_DIR = os.path.join(SAVED_MODELS_DIR, "shap")
-DATA_PATH = os.path.join(PROJECT_ROOT, "data", "transactions.csv")
+DATA_PATH = os.path.join(DATA_DIR, "transactions.csv")
 
 
 def get_feature_importance(top_n=15):

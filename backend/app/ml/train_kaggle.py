@@ -37,10 +37,8 @@ except Exception:
 
 from app.ml.plots import generate_all_plots
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-PROJECT_ROOT = os.path.dirname(BASE_DIR)
-DATA_PATH = os.path.join(PROJECT_ROOT, "data", "creditcard.csv")
-SAVED_MODELS_DIR = os.path.join(PROJECT_ROOT, "saved_models")
+from app.core.paths import PROJECT_ROOT, SAVED_MODELS_DIR, DATA_DIR
+DATA_PATH = os.path.join(DATA_DIR, "creditcard.csv")
 MLRUNS_DIR = os.path.join(PROJECT_ROOT, "mlruns")
 
 

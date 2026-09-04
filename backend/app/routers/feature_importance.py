@@ -8,10 +8,9 @@ from app.ml.explain import get_feature_importance
 
 router = APIRouter(tags=["explainability"])
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-PROJECT_ROOT = os.path.dirname(BASE_DIR)
-SHAP_DIR = os.path.join(PROJECT_ROOT, "saved_models", "shap")
-PLOTS_DIR = os.path.join(PROJECT_ROOT, "saved_models", "plots")
+from app.core.paths import SAVED_MODELS_DIR
+SHAP_DIR = os.path.join(SAVED_MODELS_DIR, "shap")
+PLOTS_DIR = os.path.join(SAVED_MODELS_DIR, "plots")
 
 
 @router.get("/feature-importance", response_model=List[FeatureImportanceItem])
