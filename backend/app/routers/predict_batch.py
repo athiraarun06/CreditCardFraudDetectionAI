@@ -99,6 +99,7 @@ async def predict_batch(
                 fraud_label=result["prediction"],
             )
             db.add(txn)
+            db.flush()
             db.add(Prediction(
                 user_id=current_user.id,
                 transaction_id=data["transaction_id"],

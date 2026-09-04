@@ -155,6 +155,10 @@ def predict_transaction(
         fraud_label=result["prediction"],
     )
     db.add(txn)
+    # Force the Transaction INSERT to happen now, before adding rows that FK-reference it —
+    # Postgres enforces FK constraints strictly (unlike SQLite by default), and relying on
+    # SQLAlchemy's automatic insert ordering across unrelated mapped classes isn't safe.
+    db.flush()
 
     db.add(Prediction(
         user_id=current_user.id,
