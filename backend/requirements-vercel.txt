@@ -1,0 +1,17 @@
+# Trimmed dependency set for the Vercel serverless deployment — training-only libraries
+# (xgboost, lightgbm, mlflow, matplotlib, imbalanced-learn) are dropped since a serverless
+# function only ever SERVES predictions from the already-trained model committed in
+# saved_models/, it never trains. This keeps the function well under Vercel's size limit.
+# For local development / training, use requirements.txt instead.
+fastapi==0.111.0
+sqlalchemy==2.0.30
+psycopg2-binary==2.9.9
+pydantic[email]==2.7.1
+python-jose[cryptography]==3.3.0
+bcrypt==4.1.3
+python-multipart==0.0.9
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.4.2
+shap==0.45.0
+joblib==1.4.2

@@ -7,7 +7,6 @@ dist/
 .env
 *.log
 mlruns/
-saved_models/*.pkl
 .DS_Store
 backend/fraud.db
 data/creditcard.csv

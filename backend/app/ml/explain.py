@@ -3,9 +3,6 @@ import json
 import joblib
 import numpy as np
 import pandas as pd
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 
 from app.ml.features import engineer_features, CATEGORICAL_COLS, NUMERIC_COLS
 
@@ -33,6 +30,10 @@ def get_feature_importance(top_n=15):
 
 
 def generate_shap_plots(sample_size=200):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
     os.makedirs(SHAP_DIR, exist_ok=True)
     model = joblib.load(os.path.join(SAVED_MODELS_DIR, "best_model.pkl"))
     preprocessor = joblib.load(os.path.join(SAVED_MODELS_DIR, "preprocessor.pkl"))

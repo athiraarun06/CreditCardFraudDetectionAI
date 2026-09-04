@@ -7,7 +7,13 @@ from sqlalchemy.orm import sessionmaker
 logger = logging.getLogger("fraud_detection")
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DEFAULT_SQLITE_PATH = os.path.join(BASE_DIR, "fraud.db")
+# Serverless platforms (Vercel, AWS Lambda) only allow writes under /tmp — the rest of the
+# filesystem is read-only. Note this means SQLite data does NOT persist across cold starts
+# there; use a real Postgres DATABASE_URL for anything beyond a quick demo on those platforms.
+if os.getenv("VERCEL") or os.getenv("AWS_LAMBDA_FUNCTION_NAME"):
+    DEFAULT_SQLITE_PATH = "/tmp/fraud.db"
+else:
+    DEFAULT_SQLITE_PATH = os.path.join(BASE_DIR, "fraud.db")
 DEFAULT_SQLITE_URL = f"sqlite:///{DEFAULT_SQLITE_PATH}"
 
 DATABASE_URL = os.getenv("DATABASE_URL", DEFAULT_SQLITE_URL) or DEFAULT_SQLITE_URL
