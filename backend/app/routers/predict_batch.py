@@ -99,7 +99,7 @@ async def predict_batch(
                 fraud_label=result["prediction"],
             )
             db.add(txn)
-            db.flush()
+            db.commit()
             db.add(Prediction(
                 user_id=current_user.id,
                 transaction_id=data["transaction_id"],
@@ -130,6 +130,7 @@ async def predict_batch(
                 ))
             results.append({"row": int(idx), "transaction_id": data["transaction_id"], **result})
         except Exception as e:
+            db.rollback()  # keep the session usable for subsequent rows after a mid-loop failure
             logger.warning(f"Batch predict failed for row {idx}: {e}")
             errors.append({"row": int(idx), "error": str(e)})
 

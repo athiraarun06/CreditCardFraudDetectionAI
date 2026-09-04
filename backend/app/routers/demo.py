@@ -169,7 +169,7 @@ def generate_demo_transactions(
             fraud_probability=result["probability"],
             fraud_label=result["prediction"],
         ))
-        db.flush()
+        db.commit()
         db.add(Prediction(
             user_id=current_user.id,
             transaction_id=txn_id,
