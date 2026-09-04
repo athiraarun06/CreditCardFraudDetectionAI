@@ -9,6 +9,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 **[🚀 Try the Live App](https://credit-card-fraud-detection-ai-athira-arun.vercel.app)** · **[📘 API Docs](https://creditcard-fraud-backend.onrender.com/docs)** · **[📄 Project Report](docs/PROJECT_REPORT.md)**
 
@@ -204,6 +205,10 @@ analysis: [`docs/TESTING_REPORT.md`](docs/TESTING_REPORT.md).
 Real-time streaming ingestion (Kafka), MLflow Model Registry-backed model versioning, role-based
 access control, Redis-backed rate limiting for multi-instance deployments, and training on a
 larger real-world labeled dataset.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) — free to use, modify, and distribute.
 
 ---
 
